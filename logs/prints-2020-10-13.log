@@ -1,0 +1,6 @@
+19:04:00.518 [main] INFO  resources.Base - executing on the browser null
+19:04:00.539 [main] INFO  resources.Base - executing on the browser chrome
+19:04:05.140 [main] INFO  resources.Base - executing on the browser null
+19:04:05.141 [main] INFO  resources.Base - executing on the browser chrome
+19:04:24.600 [main] INFO  assembly.HomePageValidation - Assertion passed since application landed on Employee Free Recognition page
+19:04:24.656 [main] INFO  assembly.HomePageValidation - The total count of email fields are 2

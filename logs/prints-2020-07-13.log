@@ -1,0 +1,7 @@
+21:22:02.918 [main] INFO  resources.Base - The url is https://dev.joinassembly.com/signin
+21:22:02.925 [main] INFO  resources.Base - executing on the browser chrome
+21:22:06.845 [main] INFO  resources.Base - The url is https://dev.joinassembly.com/signin
+21:22:06.846 [main] INFO  resources.Base - executing on the browser chrome
+21:22:24.366 [main] INFO  resources.Base - Navigated to the provided URL
+21:23:54.287 [main] INFO  resources.Base - The url is https://dev.joinassembly.com/signin
+21:23:54.290 [main] INFO  resources.Base - executing on the browser chrome

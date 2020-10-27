@@ -1,0 +1,7 @@
+10:32:56.798 [main] INFO  resources.O365SsoSignIn - Navigated to the provided URL
+10:32:56.864 [main] INFO  resources.O365SsoSignIn - Assertion passed for login page
+10:41:13.580 [main] INFO  resources.Base - executing on the browser null
+10:41:13.587 [main] INFO  resources.Base - executing on the browser chrome
+10:41:23.374 [main] INFO  resources.GoogleSsoSignIn - Navigated to the provided URL
+10:41:23.415 [main] INFO  resources.GoogleSsoSignIn - Assertion passed for login page
+10:42:04.045 [main] INFO  resources.Base - executing on the browser null
