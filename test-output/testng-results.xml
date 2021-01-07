@@ -1,41 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="54823" started-at="2021-01-07T08:13:08Z" finished-at="2021-01-07T08:14:03Z">
+  <suite name="Default suite" duration-ms="99343" started-at="2021-01-07T08:29:24Z" finished-at="2021-01-07T08:31:04Z">
     <groups>
     </groups>
-    <test name="downgrade to Free plan" duration-ms="54823" started-at="2021-01-07T08:13:08Z" finished-at="2021-01-07T08:14:03Z">
-      <class name="billingFlow.FreePlanBillingFlow">
-        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:billingFlow.FreePlanBillingFlow@158a8276]" name="initializeDriver" is-config="true" duration-ms="4605" started-at="2021-01-07T08:13:08Z" finished-at="2021-01-07T08:13:13Z">
+    <test name="Default test" duration-ms="99343" started-at="2021-01-07T08:29:24Z" finished-at="2021-01-07T08:31:04Z">
+      <class name="slacktestcases.SlackQueuedInviteFlowValidation">
+        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:slacktestcases.SlackQueuedInviteFlowValidation@3c3d9b6b]" name="initializeDriver" is-config="true" duration-ms="4483" started-at="2021-01-07T08:29:24Z" finished-at="2021-01-07T08:29:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method status="PASS" signature="initFreePlanBillingFlow()[pri:0, instance:billingFlow.FreePlanBillingFlow@158a8276]" name="initFreePlanBillingFlow" is-config="true" duration-ms="3183" started-at="2021-01-07T08:13:13Z" depends-on-methods="resources.InitiateDriver.initializeDriver" finished-at="2021-01-07T08:13:16Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:slacktestcases.SlackQueuedInviteFlowValidation@3c3d9b6b]" name="init" is-config="true" duration-ms="3118" started-at="2021-01-07T08:29:29Z" depends-on-methods="resources.InitiateDriver.initializeDriver" finished-at="2021-01-07T08:29:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initFreePlanBillingFlow -->
-        <test-method status="PASS" signature="validateLandingPage()[pri:0, instance:billingFlow.FreePlanBillingFlow@158a8276]" name="validateLandingPage" duration-ms="7045" started-at="2021-01-07T08:13:16Z" finished-at="2021-01-07T08:13:23Z">
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="validateLogin()[pri:0, instance:slacktestcases.SlackQueuedInviteFlowValidation@3c3d9b6b]" name="validateLogin" duration-ms="12328" started-at="2021-01-07T08:29:32Z" finished-at="2021-01-07T08:29:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateLogin -->
+        <test-method status="PASS" signature="validateLandingPage()[pri:0, instance:slacktestcases.SlackQueuedInviteFlowValidation@3c3d9b6b]" name="validateLandingPage" duration-ms="1838" started-at="2021-01-07T08:29:44Z" finished-at="2021-01-07T08:29:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateLandingPage -->
-        <test-method status="PASS" signature="validateValidLogin()[pri:1, instance:billingFlow.FreePlanBillingFlow@158a8276]" name="validateValidLogin" duration-ms="5241" started-at="2021-01-07T08:13:23Z" finished-at="2021-01-07T08:13:28Z">
+        <test-method status="PASS" signature="managePageSetup()[pri:0, instance:slacktestcases.SlackQueuedInviteFlowValidation@3c3d9b6b]" name="managePageSetup" duration-ms="4722" started-at="2021-01-07T08:29:46Z" finished-at="2021-01-07T08:29:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateValidLogin -->
-        <test-method status="PASS" signature="accountPlan()[pri:2, instance:billingFlow.FreePlanBillingFlow@158a8276]" name="accountPlan" duration-ms="4682" started-at="2021-01-07T08:13:28Z" finished-at="2021-01-07T08:13:33Z">
+        </test-method> <!-- managePageSetup -->
+        <test-method status="PASS" signature="validateCancelButtonOnClick()[pri:1, instance:slacktestcases.SlackQueuedInviteFlowValidation@3c3d9b6b]" name="validateCancelButtonOnClick" duration-ms="7434" started-at="2021-01-07T08:29:51Z" finished-at="2021-01-07T08:29:58Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- accountPlan -->
-        <test-method status="PASS" signature="switchToFreePlanOnKeepPlan()[pri:3, instance:billingFlow.FreePlanBillingFlow@158a8276]" name="switchToFreePlanOnKeepPlan" duration-ms="19631" started-at="2021-01-07T08:13:33Z" finished-at="2021-01-07T08:13:53Z">
+        </test-method> <!-- validateCancelButtonOnClick -->
+        <test-method status="PASS" signature="connectSlackOnCancel()[pri:2, instance:slacktestcases.SlackQueuedInviteFlowValidation@3c3d9b6b]" name="connectSlackOnCancel" duration-ms="30157" started-at="2021-01-07T08:29:58Z" finished-at="2021-01-07T08:30:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- switchToFreePlanOnKeepPlan -->
-        <test-method status="PASS" signature="switchToFreePlanOnDowngradeButtonClick()[pri:4, instance:billingFlow.FreePlanBillingFlow@158a8276]" name="switchToFreePlanOnDowngradeButtonClick" duration-ms="10415" started-at="2021-01-07T08:13:53Z" finished-at="2021-01-07T08:14:03Z">
+        </test-method> <!-- connectSlackOnCancel -->
+        <test-method status="PASS" signature="validateQueuedInvitesFlow()[pri:3, instance:slacktestcases.SlackQueuedInviteFlowValidation@3c3d9b6b]" name="validateQueuedInvitesFlow" duration-ms="20290" started-at="2021-01-07T08:30:28Z" finished-at="2021-01-07T08:30:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- switchToFreePlanOnDowngradeButtonClick -->
-      </class> <!-- billingFlow.FreePlanBillingFlow -->
-    </test> <!-- downgrade to Free plan -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- validateQueuedInvitesFlow -->
+        <test-method status="PASS" signature="validateQueuedInvitesFlowOnView()[pri:4, instance:slacktestcases.SlackQueuedInviteFlowValidation@3c3d9b6b]" name="validateQueuedInvitesFlowOnView" duration-ms="10237" started-at="2021-01-07T08:30:49Z" finished-at="2021-01-07T08:30:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateQueuedInvitesFlowOnView -->
+        <test-method status="PASS" signature="validateQuickSettings()[pri:5, instance:slacktestcases.SlackQueuedInviteFlowValidation@3c3d9b6b]" name="validateQuickSettings" duration-ms="4712" started-at="2021-01-07T08:30:59Z" finished-at="2021-01-07T08:31:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateQuickSettings -->
+      </class> <!-- slacktestcases.SlackQueuedInviteFlowValidation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

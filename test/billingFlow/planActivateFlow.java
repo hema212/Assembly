@@ -13,9 +13,10 @@ import org.testng.annotations.Test;
 import billing.BillingSignIn;
 import billingPageObjects.AccountPlanPageObjects;
 import giveRecognitionPageObjects.loginPageObjects;
+import resources.InitiateDriver;
 import slackPageObjects.SlackIdentityObjects;
 
-public class planActivateFlow extends BillingSignIn {
+public class planActivateFlow extends InitiateDriver {
 	
 	public WebDriver driver;
 	public static Logger log = LogManager.getLogger(planActivateFlow.class.getName());
