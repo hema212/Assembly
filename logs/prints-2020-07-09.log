@@ -1,7 +1,0 @@
-19:07:56.771 [main] INFO  resources.Base - The url is https://dev.joinassembly.com/signin
-19:07:56.785 [main] INFO  resources.Base - executing on the browser chrome
-19:08:08.602 [main] INFO  resources.Base - Navigated to the provided URL
-19:08:08.656 [main] INFO  resources.Base - Assertion passed for login page
-19:08:11.821 [main] INFO  resources.Base - Successfully logged into Assembly homepage!
-19:08:11.821 [main] INFO  resources.Base - Assertion Passed for homepage landing
-19:08:19.031 [main] INFO  assembly.LoginPageValidate - The number of users in the list is 2

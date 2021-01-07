@@ -1,7 +1,0 @@
-18:04:14.788 [main] INFO  resources.BaseSignInViaSlack - Assertion Passed for homepage landing
-18:28:36.559 [main] INFO  resources.Base - executing on the browser null
-18:28:36.562 [main] INFO  resources.Base - executing on the browser chrome
-18:28:40.813 [main] INFO  resources.Base - executing on the browser null
-18:28:40.813 [main] INFO  resources.Base - executing on the browser chrome
-18:28:50.082 [main] INFO  resources.O365SsoSignIn - Navigated to the provided URL
-18:28:50.117 [main] INFO  resources.O365SsoSignIn - Assertion passed for login page

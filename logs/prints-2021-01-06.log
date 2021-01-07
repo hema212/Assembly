@@ -1,0 +1,20 @@
+21:18:05.953 [main] INFO  resources.InitiateDriver - executing on the browser https://dev.joinassembly.com/signin
+21:18:05.963 [main] INFO  resources.InitiateDriver - Navigated to the provided URL
+21:18:06.018 [main] INFO  resources.InitiateDriver - Assertion passed for login page
+21:18:11.303 [main] INFO  resources.InitiateDriver - Successfully logged into Assembly homepage!
+21:18:11.303 [main] INFO  resources.InitiateDriver - Assertion Passed for homepage landing
+21:21:31.714 [main] INFO  resources.InitiateDriver - executing on the browser https://dev.joinassembly.com/v2/home
+21:21:31.717 [main] INFO  resources.InitiateDriver - executing on the browser chrome
+21:21:36.325 [main] INFO  resources.InitiateDriver - executing on the browser https://dev.joinassembly.com/v2/home
+21:21:36.326 [main] INFO  resources.InitiateDriver - executing on the browser chrome
+21:21:52.071 [main] INFO  assembly.HomePageValidation - Assertion passed since application landed on Employee Free Recognition page
+21:22:00.544 [main] INFO  resources.InitiateDriver - executing on the browser https://dev.joinassembly.com/signin
+21:22:00.544 [main] INFO  resources.InitiateDriver - Navigated to the provided URL
+21:22:00.615 [main] INFO  resources.InitiateDriver - Assertion passed for login page
+21:22:05.907 [main] INFO  resources.InitiateDriver - Successfully logged into Assembly homepage!
+21:22:05.907 [main] INFO  resources.InitiateDriver - Assertion Passed for homepage landing
+21:23:53.246 [main] INFO  resources.InitiateDriver - executing on the browser https://dev.joinassembly.com/v2/home
+21:23:53.248 [main] INFO  resources.InitiateDriver - executing on the browser chrome
+21:23:57.937 [main] INFO  resources.InitiateDriver - executing on the browser https://dev.joinassembly.com/v2/home
+21:23:57.937 [main] INFO  resources.InitiateDriver - executing on the browser chrome
+21:24:14.656 [main] INFO  assembly.HomePageValidation - Assertion passed since application landed on Employee Free Recognition page

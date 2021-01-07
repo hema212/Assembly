@@ -1,7 +1,0 @@
-13:52:02.230 [main] INFO  resources.Base - executing on the browser chrome
-13:52:10.742 [main] INFO  resources.GoogleSsoSignIn - Navigated to the provided URL
-13:52:10.796 [main] INFO  resources.GoogleSsoSignIn - Assertion passed for login page
-14:00:52.263 [main] INFO  resources.Base - executing on the browser null
-14:00:52.266 [main] INFO  resources.Base - executing on the browser chrome
-14:00:56.708 [main] INFO  resources.Base - executing on the browser null
-14:00:56.708 [main] INFO  resources.Base - executing on the browser chrome

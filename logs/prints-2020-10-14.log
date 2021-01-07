@@ -1,6 +1,0 @@
-17:28:24.909 [main] INFO  resources.Base - executing on the browser chrome
-17:28:30.132 [main] INFO  resources.Base - executing on the browser null
-17:28:30.132 [main] INFO  resources.Base - executing on the browser chrome
-17:28:42.603 [main] INFO  assembly.HomePageValidation - Assertion passed since application landed on Employee Free Recognition page
-17:30:51.605 [main] INFO  resources.Base - executing on the browser null
-17:30:51.608 [main] INFO  resources.Base - executing on the browser chrome
