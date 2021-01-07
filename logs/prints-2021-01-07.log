@@ -1,20 +1,16 @@
-13:39:35.740 [main] INFO  resources.InitiateDriver - executing on the browser https://dev.joinassembly.com/v2/home
-13:39:35.745 [main] INFO  resources.InitiateDriver - executing on the browser chrome
-13:39:46.934 [main] INFO  billing.BillingSignIn - executing on the browser https://dev.joinassembly.com/signin
-13:39:46.935 [main] INFO  billing.BillingSignIn - Navigated to the provided URL
-13:39:47.001 [main] INFO  billing.BillingSignIn - Assertion passed for login page
-13:42:30.540 [main] INFO  resources.InitiateDriver - executing on the browser https://dev.joinassembly.com/v2/home
-13:42:30.543 [main] INFO  resources.InitiateDriver - executing on the browser chrome
-13:42:35.009 [main] INFO  resources.InitiateDriver - executing on the browser https://dev.joinassembly.com/v2/home
-13:42:35.010 [main] INFO  resources.InitiateDriver - executing on the browser chrome
-13:42:46.355 [main] INFO  billingFlow.FreePlanBillingFlow - executing on the browser https://dev.joinassembly.com/signin
-13:42:46.355 [main] INFO  billingFlow.FreePlanBillingFlow - Navigated to the provided URL
-13:42:46.390 [main] INFO  billingFlow.FreePlanBillingFlow - Assertion passed for login page
-13:42:50.960 [main] INFO  billingFlow.FreePlanBillingFlow - Successfully logged into Assembly homepage!
-13:42:50.961 [main] INFO  billingFlow.FreePlanBillingFlow - Assertion Passed for homepage landing
-13:42:55.461 [main] INFO  billingFlow.FreePlanBillingFlow - Account plan landing page text is > Account Plan
-13:42:55.461 [main] INFO  billingFlow.FreePlanBillingFlow - Testcase-1 passed since application landed on Manage page and Assertion passed
-13:43:08.707 [main] INFO  resources.InitiateDriver - executing on the browser https://dev.joinassembly.com/v2/home
-13:43:08.710 [main] INFO  resources.InitiateDriver - executing on the browser chrome
-13:43:13.297 [main] INFO  resources.InitiateDriver - executing on the browser https://dev.joinassembly.com/v2/home
-13:43:13.297 [main] INFO  resources.InitiateDriver - executing on the browser chrome
+14:00:00.766 [main] INFO  slacktestcases.SlackQueuedInviteFlowValidation - Set up text is ===> Set up Slack as your identity provider
+14:00:00.795 [main] INFO  slacktestcases.SlackQueuedInviteFlowValidation - Step count is ===> Step 1 of 4
+14:00:02.657 [main] INFO  slacktestcases.SlackQueuedInviteFlowValidation - Sign in to your workspace
+14:00:22.506 [main] INFO  slacktestcases.SlackQueuedInviteFlowValidation - The header of Cancel modal is  Are you sure you want to cancel Slack setup?
+14:00:22.600 [main] INFO  slacktestcases.SlackQueuedInviteFlowValidation - Step count is ===> Step 2 of 4
+14:00:22.600 [main] INFO  slacktestcases.SlackQueuedInviteFlowValidation - User has clicked on Nevermind button
+14:00:24.685 [main] INFO  slacktestcases.SlackQueuedInviteFlowValidation - The header of Cancel modal is  Are you sure you want to cancel Slack setup?
+14:00:27.793 [main] INFO  slacktestcases.SlackQueuedInviteFlowValidation - the text is Connect your identity provider
+14:00:27.793 [main] INFO  slacktestcases.SlackQueuedInviteFlowValidation - User has clicked on Sure button
+14:00:28.793 [main] INFO  slacktestcases.SlackQueuedInviteFlowValidation - Testcase-3 passed since application connected to slack by entering details and disonnected on click of I'm sure button after cancel button clicked
+14:00:30.920 [main] INFO  slacktestcases.SlackQueuedInviteFlowValidation - Set up text is ===> Set up Slack as your identity provider
+14:00:30.946 [main] INFO  slacktestcases.SlackQueuedInviteFlowValidation - Step count is ===> Step 1 of 4
+14:00:43.445 [main] INFO  slacktestcases.SlackQueuedInviteFlowValidation - Step count is ===> Step 2 of 4
+14:00:43.446 [main] INFO  slacktestcases.SlackQueuedInviteFlowValidation - Selected Everyone radio button option which is default when user lands
+14:00:46.597 [main] INFO  slacktestcases.SlackQueuedInviteFlowValidation - Step count is ===> Step 3 of 4
+14:00:47.665 [main] INFO  slacktestcases.SlackQueuedInviteFlowValidation - Selected I'll send them later and admin approval Radio button option
