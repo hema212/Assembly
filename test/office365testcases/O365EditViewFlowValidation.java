@@ -9,8 +9,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import PageObjects.O365PageObjects;
-import resources.O365SsoSignIn;
+import officePageObjects.O365PageObjects;
+import signInViaSSO.O365SsoSignIn;
 import slacktestcases.SlackQueuedInviteFlowValidation;
 
 //Execute this Second(2nd) when users are in Queued Invites when slack is disconnected

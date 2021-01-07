@@ -8,22 +8,20 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import PageObjects.InvitesPageObject;
-import PageObjects.RecognitionPageObject;
+import giveRecognitionPageObjects.InvitesPageObject;
+import giveRecognitionPageObjects.RecognitionPageObject;
 import resources.Base;
 
-
- public class BulkInviteUserValidate extends Base{
+public class BulkInviteUserValidate extends Base {
 	public static Logger log = LogManager.getLogger(LoginPageValidate.class.getName());
 
 	@Test(priority = 1)
-	public void InviteMemberUsingBulkIcon() throws InterruptedException
-	{
+	public void InviteMemberUsingBulkIcon() throws InterruptedException {
 		RecognitionPageObject recogobject = new RecognitionPageObject(driver);
 		String getNoWorkerText = recogobject.getSendInviteButtonText().getText();
 		System.out.println(getNoWorkerText);
 		Assert.assertEquals(getNoWorkerText, "SEND INVITES");
-		//Logging info
+		// Logging info
 		log.info("No users available hence clicking on SEND INVITES button");
 		recogobject.getSendInviteButtonText().click();
 		InvitesPageObject inviteworkerobject = new InvitesPageObject(driver);
@@ -36,23 +34,20 @@ import resources.Base;
 		System.out.println(getInviteTeamMemberText);
 		Assert.assertEquals(getInviteTeamMemberText, "Invite team members");
 		log.info("Landed onto invite member page");
-		String[] invitee= { "hema+testing1@joinassembly.com", "hema+testing2@joinassembly.com" };
+		String[] invitee = { "hema+testing1@joinassembly.com", "hema+testing2@joinassembly.com" };
 		inviteworkerobject.getInviteeEmailField().sendKeys("testing.com");
 		Thread.sleep(1000L);
 		inviteworkerobject.getSendButton().click();
 		String saveErrorInvalidEmail = inviteworkerobject.getInvalidEmailErrorMessage().getText();
-		if(saveErrorInvalidEmail.equalsIgnoreCase(saveErrorInvalidEmail)) {
+		if (saveErrorInvalidEmail.equalsIgnoreCase(saveErrorInvalidEmail)) {
 			log.info("User has entered invalid email id! Clicking on Cancel");
 			inviteworkerobject.getCancelButton().click();
-		}
-		else {
+		} else {
 			log.info("Application supports Invalid email format");
 		}
 		inviteworkerobject.getBulkIconXpath().click();
-		System.out.println(invitee[0] + ',' + invitee[1] );
+		System.out.println(invitee[0] + ',' + invitee[1]);
 		inviteworkerobject.getInviteeEmailField().sendKeys(invitee[0] + ',' + invitee[1]);
 		inviteworkerobject.getSendButton().click();
 	}
 }
-
-

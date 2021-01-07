@@ -13,13 +13,13 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import PageObjects.O365PageObjects;
-import PageObjects.RecognitionPageObject;
-import resources.BaseSigninViaO365;
+import accountSignInWhenIMConnected.OfficeSignInWhenConnected;
+import giveRecognitionPageObjects.RecognitionPageObject;
+import officePageObjects.O365PageObjects;
 import slacktestcases.SlackIdentityUpgradeViewFlow;
 
 //Execute this Fourth(4th) when Office 365 is connected and try to login via email
-public class SignInWhenO365IsConnectedUsingEmail extends BaseSigninViaO365 {
+public class SignInWhenO365IsConnectedUsingEmail extends OfficeSignInWhenConnected {
 	public static Logger log = LogManager.getLogger(SignInWhenO365IsConnectedUsingEmail.class.getName());
 	public O365PageObjects O365object;
 	public RecognitionPageObject recogobject;

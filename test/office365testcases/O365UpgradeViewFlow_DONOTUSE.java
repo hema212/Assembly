@@ -13,8 +13,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import PageObjects.O365PageObjects;
-import resources.O365SsoSignIn;
+import officePageObjects.O365PageObjects;
+import signInViaSSO.O365SsoSignIn;
 import slacktestcases.SlackIdentityUpgradeViewFlow;
 
 //Execute this Third(3rd) when Slack is not connected and account has free plan

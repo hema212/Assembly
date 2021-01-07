@@ -5,7 +5,7 @@ import java.io.IOException;
 
 import org.testng.annotations.Test;
 
-import PageObjects.HomePageObjects;
+import giveRecognitionPageObjects.HomePageObjects;
 
 public class HomePageLaunchURL extends InitiateDriver {
 	HomePageObjects homepageobject = new HomePageObjects(driver);

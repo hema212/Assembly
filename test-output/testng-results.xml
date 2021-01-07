@@ -1,33 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="50484" started-at="2020-10-27T13:07:56Z" finished-at="2020-10-27T13:08:47Z">
+  <suite name="Suite" duration-ms="54823" started-at="2021-01-07T08:13:08Z" finished-at="2021-01-07T08:14:03Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="50484" started-at="2020-10-27T13:07:56Z" finished-at="2020-10-27T13:08:47Z">
-      <class name="office365testcases.O365EditViewFlowValidation">
-        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:office365testcases.O365EditViewFlowValidation@13b6aecc]" name="initializeDriver" is-config="true" duration-ms="4466" started-at="2020-10-27T13:07:52Z" finished-at="2020-10-27T13:07:56Z">
+    <test name="downgrade to Free plan" duration-ms="54823" started-at="2021-01-07T08:13:08Z" finished-at="2021-01-07T08:14:03Z">
+      <class name="billingFlow.FreePlanBillingFlow">
+        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:billingFlow.FreePlanBillingFlow@158a8276]" name="initializeDriver" is-config="true" duration-ms="4605" started-at="2021-01-07T08:13:08Z" finished-at="2021-01-07T08:13:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method status="PASS" signature="init()[pri:0, instance:office365testcases.O365EditViewFlowValidation@13b6aecc]" name="init" is-config="true" duration-ms="3127" started-at="2020-10-27T13:07:56Z" finished-at="2020-10-27T13:07:59Z">
+        <test-method status="PASS" signature="initFreePlanBillingFlow()[pri:0, instance:billingFlow.FreePlanBillingFlow@158a8276]" name="initFreePlanBillingFlow" is-config="true" duration-ms="3183" started-at="2021-01-07T08:13:13Z" depends-on-methods="resources.InitiateDriver.initializeDriver" finished-at="2021-01-07T08:13:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="validateSlackLoginWhenConnected()[pri:0, instance:office365testcases.O365EditViewFlowValidation@13b6aecc]" name="validateSlackLoginWhenConnected" duration-ms="19670" started-at="2020-10-27T13:07:59Z" finished-at="2020-10-27T13:08:19Z">
+        </test-method> <!-- initFreePlanBillingFlow -->
+        <test-method status="PASS" signature="validateLandingPage()[pri:0, instance:billingFlow.FreePlanBillingFlow@158a8276]" name="validateLandingPage" duration-ms="7045" started-at="2021-01-07T08:13:16Z" finished-at="2021-01-07T08:13:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateSlackLoginWhenConnected -->
-        <test-method status="PASS" signature="EditInvitesValidationOnCancel()[pri:1, instance:office365testcases.O365EditViewFlowValidation@13b6aecc]" name="EditInvitesValidationOnCancel" duration-ms="10401" started-at="2020-10-27T13:08:19Z" finished-at="2020-10-27T13:08:29Z">
+        </test-method> <!-- validateLandingPage -->
+        <test-method status="PASS" signature="validateValidLogin()[pri:1, instance:billingFlow.FreePlanBillingFlow@158a8276]" name="validateValidLogin" duration-ms="5241" started-at="2021-01-07T08:13:23Z" finished-at="2021-01-07T08:13:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- EditInvitesValidationOnCancel -->
-        <test-method status="PASS" signature="EditInvitesValidationOnConfirm()[pri:2, instance:office365testcases.O365EditViewFlowValidation@13b6aecc]" name="EditInvitesValidationOnConfirm" duration-ms="17271" started-at="2020-10-27T13:08:29Z" finished-at="2020-10-27T13:08:47Z">
+        </test-method> <!-- validateValidLogin -->
+        <test-method status="PASS" signature="accountPlan()[pri:2, instance:billingFlow.FreePlanBillingFlow@158a8276]" name="accountPlan" duration-ms="4682" started-at="2021-01-07T08:13:28Z" finished-at="2021-01-07T08:13:33Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- EditInvitesValidationOnConfirm -->
-      </class> <!-- office365testcases.O365EditViewFlowValidation -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- accountPlan -->
+        <test-method status="PASS" signature="switchToFreePlanOnKeepPlan()[pri:3, instance:billingFlow.FreePlanBillingFlow@158a8276]" name="switchToFreePlanOnKeepPlan" duration-ms="19631" started-at="2021-01-07T08:13:33Z" finished-at="2021-01-07T08:13:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- switchToFreePlanOnKeepPlan -->
+        <test-method status="PASS" signature="switchToFreePlanOnDowngradeButtonClick()[pri:4, instance:billingFlow.FreePlanBillingFlow@158a8276]" name="switchToFreePlanOnDowngradeButtonClick" duration-ms="10415" started-at="2021-01-07T08:13:53Z" finished-at="2021-01-07T08:14:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- switchToFreePlanOnDowngradeButtonClick -->
+      </class> <!-- billingFlow.FreePlanBillingFlow -->
+    </test> <!-- downgrade to Free plan -->
+  </suite> <!-- Suite -->
 </testng-results>

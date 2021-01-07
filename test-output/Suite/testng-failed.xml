@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)">
+  <listeners>
+    <listener class-name="listener.TestngListeners"/>
+  </listeners>
+  <test thread-count="5" name="downgrade to Free plan(failed)">
     <classes>
-      <class name="slacktestcases.SlackIdentityUpgradeViewFlow">
+      <class name="billingFlow.FreePlanBillingFlow">
         <methods>
-          <include name="validateLogin"/>
-          <include name="editConnectionFlow"/>
-          <include name="connectSlackOnCancel"/>
-          <include name="selectSlackIMProvider"/>
-          <include name="ViewInvitesFlow"/>
-          <include name="init"/>
-          <include name="SlackFlowValidateUpgradeNowEmptyFields"/>
+          <include name="accountPlan"/>
+          <include name="initFreePlanBillingFlow"/>
+          <include name="switchToFreePlanOnDowngradeButtonClick"/>
+          <include name="initvalidateValidLogin"/>
+          <include name="switchToFreePlanOnKeepPlan"/>
           <include name="initializeDriver"/>
+          <include name="validateValidLogin"/>
         </methods>
-      </class> <!-- slacktestcases.SlackIdentityUpgradeViewFlow -->
+      </class> <!-- billingFlow.FreePlanBillingFlow -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- downgrade to Free plan(failed) -->
 </suite> <!-- Failed suite [Suite] -->

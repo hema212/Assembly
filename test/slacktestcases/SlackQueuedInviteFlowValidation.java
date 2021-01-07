@@ -13,8 +13,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import PageObjects.SlackIdentityObjects;
 import resources.Base;
+import slackPageObjects.SlackIdentityObjects;
 
 //Execute this First(1st) when Slack is not connected and doesn't have slack users in it
 public class SlackQueuedInviteFlowValidation extends Base {
@@ -80,6 +80,7 @@ public class SlackQueuedInviteFlowValidation extends Base {
 		Thread.sleep(4000L);
 		validateSelectPeopleAssertion();
 		log.info("Selected Everyone radio button option which is default when user lands");
+		Thread.sleep(3000L);
 		slackobject.ContinueWithEveryoneButton().click();
 		validateConfigureInvitesAssertion();
 		slackobject.SendThemLaterRadio().click();
@@ -88,7 +89,7 @@ public class SlackQueuedInviteFlowValidation extends Base {
 		slackobject.CreateAssemblyAccountsButton().click();
 		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(driver, 20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(), 'View')]")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(), 'View')]")));
 		validateCreateAccountAssertion();
 		log.info("Testcase-4 passed since application clicked on I'll send them later button");
 	}
@@ -101,7 +102,7 @@ public class SlackQueuedInviteFlowValidation extends Base {
 		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		wait.until(
-				ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(), 'Disconnect Slack')]")));
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(), 'Disconnect Slack')]")));
 		Thread.sleep(9000L);
 		disconnectIdentityManagementOnKeepIt();
 		log.info("User has click on 'No, Keep it button in Create Accounts page");
@@ -125,12 +126,14 @@ public class SlackQueuedInviteFlowValidation extends Base {
 		Assert.assertEquals(breadcrum, "> Manage");
 		log.info(
 				"Testcase-6 passed since application landed on Manage page after disconnecting from quick settings");
+		driver.close();
 	}
 
 	// Function to validate landing page of Manage
 	public void selectManageSideNavbar() throws InterruptedException {
 		slackobject.avatarIcon().click();
 		slackobject.AdminText().click();
+		Thread.sleep(1000L);
 		slackobject.UsersText().click();
 		slackobject.ManageText().click();
 		Thread.sleep(1000L);
@@ -270,7 +273,7 @@ public class SlackQueuedInviteFlowValidation extends Base {
 		slackobject.slackPwdInputField().sendKeys("Assembly2020!");
 		slackobject.slackSignInButton().click();
 		validateSlackAppActualHeaderAssertion();
-		Thread.sleep(10000L);
+		Thread.sleep(7000L);
 		slackobject.AllowButton().click();
 	}
 

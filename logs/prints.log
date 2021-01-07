@@ -1,6 +1,17 @@
-18:37:52.175 [main] INFO  resources.Base - executing on the browser null
-18:37:52.184 [main] INFO  resources.Base - executing on the browser chrome
-18:37:56.622 [main] INFO  resources.Base - executing on the browser null
-18:37:56.622 [main] INFO  resources.Base - executing on the browser chrome
-18:38:05.678 [main] INFO  resources.O365SsoSignIn - Navigated to the provided URL
-18:38:05.716 [main] INFO  resources.O365SsoSignIn - Assertion passed for login page
+13:43:24.539 [main] INFO  billingFlow.FreePlanBillingFlow - executing on the browser https://dev.joinassembly.com/signin
+13:43:24.544 [main] INFO  billingFlow.FreePlanBillingFlow - Navigated to the provided URL
+13:43:24.583 [main] INFO  billingFlow.FreePlanBillingFlow - Assertion passed for login page
+13:43:28.779 [main] INFO  billingFlow.FreePlanBillingFlow - Successfully logged into Assembly homepage!
+13:43:28.779 [main] INFO  billingFlow.FreePlanBillingFlow - Assertion Passed for homepage landing
+13:43:33.453 [main] INFO  billingFlow.FreePlanBillingFlow - Account plan landing page text is > Account Plan
+13:43:33.453 [main] INFO  billingFlow.FreePlanBillingFlow - Testcase-1 passed since application landed on Manage page and Assertion passed
+13:43:50.842 [main] INFO  billingFlow.FreePlanBillingFlow - Downgrade button is :true
+13:43:50.842 [main] INFO  billingFlow.FreePlanBillingFlow - Downgarde now button is displayed
+13:43:53.095 [main] INFO  billingFlow.FreePlanBillingFlow - Account plan landing page text is > Account Plan
+13:43:53.095 [main] INFO  billingFlow.FreePlanBillingFlow - Testcase-2 passed since user clicked on Keep plan button & landed on Account Plan page
+13:43:57.749 [main] INFO  billingFlow.FreePlanBillingFlow - Downgrade button is :true
+13:43:57.749 [main] INFO  billingFlow.FreePlanBillingFlow - Downgarde now button is displayed
+13:43:59.950 [main] INFO  billingFlow.FreePlanBillingFlow - Account plan landing page text is > Account Plan
+13:43:59.951 [main] INFO  billingFlow.FreePlanBillingFlow - Testcase-3 passed since user clicked on Downgrade button & landed on Account Plan page
+13:44:00.008 [main] INFO  billingFlow.FreePlanBillingFlow - Message after downgrading to free plan is Downgrading to Free plan
+13:44:03.511 [main] INFO  billingFlow.FreePlanBillingFlow - Account plan landing page text is Your account is on the limited Free Plan, upgrade Assembly and improve your team engagement today!

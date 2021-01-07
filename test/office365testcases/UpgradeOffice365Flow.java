@@ -10,7 +10,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import PageObjects.O365PageObjects;
+import officePageObjects.O365PageObjects;
 import resources.Base;
 
 public class UpgradeOffice365Flow extends Base {

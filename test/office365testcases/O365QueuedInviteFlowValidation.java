@@ -13,9 +13,9 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import PageObjects.O365PageObjects;
-import PageObjects.RecognitionPageObject;
-import resources.O365SsoSignIn;
+import giveRecognitionPageObjects.RecognitionPageObject;
+import officePageObjects.O365PageObjects;
+import signInViaSSO.O365SsoSignIn;
 
 //Execute this First(1st) when Office365 is not connected and doesn't have Office365 users in it
 public class O365QueuedInviteFlowValidation extends O365SsoSignIn  {

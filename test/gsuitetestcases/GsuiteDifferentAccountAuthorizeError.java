@@ -10,11 +10,11 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import GsuitePageObject.GooglePageObjects;
-import resources.BaseGsuiteAccountMismatch;
-import resources.TOTPGenerator;
+import accountMismatchIM.GsuiteAccountMismatch;
+import gsuitePageObjects.GooglePageObjects;
+import signInViaSSO.TOTPGenerator;
 
-public class GsuiteDifferentAccountAuthorizeError extends BaseGsuiteAccountMismatch {
+public class GsuiteDifferentAccountAuthorizeError extends GsuiteAccountMismatch {
 	public static Logger log = LogManager.getLogger(GsuiteDifferentAccountAuthorizeError.class.getName());
 	public GooglePageObjects googleobject;
 	public WebDriver driver;

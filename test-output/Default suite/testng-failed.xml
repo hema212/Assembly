@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="office365testcases.O365EditViewFlowValidation">
+      <class name="assembly.HomePageValidation">
         <methods>
           <include name="init"/>
-          <include name="EditInvitesValidationOnConfirm"/>
+          <include name="requestDemoFunc"/>
+          <include name="requestDemoFuncCont"/>
           <include name="initializeDriver"/>
         </methods>
-      </class> <!-- office365testcases.O365EditViewFlowValidation -->
+      </class> <!-- assembly.HomePageValidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

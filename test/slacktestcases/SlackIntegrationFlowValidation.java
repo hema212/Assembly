@@ -10,13 +10,13 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import PageObjects.RecognitionPageObject;
-import PageObjects.SlackIdentityObjects;
-import PageObjects.SlackIntegrationPageObjects;
-import resources.BaseSignInViaSlack;
+import accountSignInWhenIMConnected.SlackSignInWhenConnected;
+import giveRecognitionPageObjects.RecognitionPageObject;
+import slackPageObjects.SlackIdentityObjects;
+import slackPageObjects.SlackIntegrationPageObjects;
 
 //Execute this only when slack is connected and Integrating for the first time / Execute this 6th
-public class SlackIntegrationFlowValidation extends BaseSignInViaSlack {
+public class SlackIntegrationFlowValidation extends SlackSignInWhenConnected {
 	public static Logger log = LogManager.getLogger(SlackQueuedInviteFlowValidation.class.getName());
 	public SlackIntegrationPageObjects slackintegrationobject;
 	public SlackIdentityObjects slackobject;

@@ -13,13 +13,13 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import PageObjects.O365PageObjects;
-import PageObjects.RecognitionPageObject;
-import resources.BaseO365AccountMismatch;
+import accountMismatchIM.O365AccountMismatch;
+import giveRecognitionPageObjects.RecognitionPageObject;
+import officePageObjects.O365PageObjects;
 import slacktestcases.SlackIdentityUpgradeViewFlow;
 
 //Execute this Fifth (5th) when Account created is different from Office 365 account
-public class O365DifferentAccountAuthorizeError extends BaseO365AccountMismatch {
+public class O365DifferentAccountAuthorizeError extends O365AccountMismatch {
 	public static Logger log = LogManager.getLogger(O365DifferentAccountAuthorizeError.class.getName());
 	public O365PageObjects office365object;
 	public RecognitionPageObject recogobject;
@@ -95,6 +95,7 @@ public class O365DifferentAccountAuthorizeError extends BaseO365AccountMismatch 
 		office365object.O365Email().sendKeys("hema2508@joinassembly123.onmicrosoft.com");
 		Thread.sleep(1000L);
 		office365object.SubmitEmail().click();
+		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='password']")));
 		office365object.O365Pwd().sendKeys("Elizebeth@123");

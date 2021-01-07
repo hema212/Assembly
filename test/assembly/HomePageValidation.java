@@ -9,12 +9,9 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import PageObjects.HomePageObjects;
-import PageObjects.loginPageObjects;
+import giveRecognitionPageObjects.HomePageObjects;
+import giveRecognitionPageObjects.loginPageObjects;
 import resources.HomePageLaunchURL;
-
-
-
 
 public class HomePageValidation extends HomePageLaunchURL {
 	public static Logger log = LogManager.getLogger(HomePageValidation.class.getName());
@@ -39,12 +36,14 @@ public class HomePageValidation extends HomePageLaunchURL {
 		log.info("Assertion passed since application landed on Employee Free Recognition page");
 	}
 
+	// Testcase to verify the count of email fields and click on first email field
+	// (If exists) Provide hema@gmail.com & hema@carrothr.com and check for output
+
 	/*
-	 * Testcase to verify the count of email fields and click on first email field
-	 * (If exists) Provide hema@gmail.com & hema@carrothr.com and check for output
+	 * @Test(priority = 1)
 	 * 
-	 * @Test(priority = 1) public void validateNonWorkEmailLogin() throws
-	 * IOException, InterruptedException { emailFieldCount =
+	 * public void validateNonWorkEmailLogin() throws IOException,
+	 * InterruptedException { Thread.sleep(1000L); emailFieldCount =
 	 * homepageobject.userEmail().size(); enterEmailClickTryButton(); String
 	 * errorMessage =
 	 * homepageobject.captureErrorMessage().getAttribute("placeholder");
@@ -53,9 +52,9 @@ public class HomePageValidation extends HomePageLaunchURL {
 	 * homepageobject.emailOne().sendKeys("hema@carrothr.com");
 	 * homepageobject.tryForFreeButton().get(0).click(); Thread.sleep(3000L); String
 	 * captureOtpHeader = homepageobject.header().getText();
-	 * Assert.assertEquals(captureOtpHeader, "Check your email"); //
-	 * log.info("Assertion passed since user landed on OTP page after work email ID
-	 * // is passed"); log.
+	 * Assert.assertEquals(captureOtpHeader, "Check your email"); // log.
+	 * info("Assertion passed since user landed on OTP page after work email ID is passed"
+	 * ); log.
 	 * info("Testcase-1 passed since user landed on OTP page after work email ID is passed"
 	 * );
 	 * 
@@ -69,7 +68,7 @@ public class HomePageValidation extends HomePageLaunchURL {
 	 * captureOtpHeader = homepageobject.header().getText();
 	 * Assert.assertEquals(captureOtpHeader, "Create a new Assembly");
 	 * log.info("Testcase-2 passed since user landed on create assembly page");
-	 * Thread.sleep(1000L); /*
+	 * Thread.sleep(1000L);
 	 * loginobject.getUsernameObject().sendKeys("hema@joinassembly.com");
 	 * loginobject.confirmButton().click(); captureErrorHeaderMessage =
 	 * loginobject.accountExistsErrorMessage().getText();
@@ -80,7 +79,6 @@ public class HomePageValidation extends HomePageLaunchURL {
 	 * "Whoops, you already have an account!");
 	 * log.info("Testcase-2 passed since Account Exists message is displayed");
 	 * Thread.sleep(1000L); loginobject.goBackToSignInButton().click();
-	 * 
 	 * 
 	 * }
 	 * 
@@ -116,57 +114,55 @@ public class HomePageValidation extends HomePageLaunchURL {
 	 * log.info("Testcase-5 passed since user can view features page content");
 	 * Thread.sleep(1000L); int featurelistsize =
 	 * homepageobject.featureSideNavList().size();
-	 * System.out.println("The feature list length is :"+featurelistsize);
-	 * if(featurelistsize>=0) { Thread.sleep(1000L);
-	 * System.out.println("Is Recognition link is active by default? "
-	 * +homepageobject.featureSideNavList().get(0).isEnabled());
+	 * System.out.println("The feature list length is :" + featurelistsize); if
+	 * (featurelistsize >= 0) { Thread.sleep(1000L);
+	 * System.out.println("Is Recognition link is active by default? " +
+	 * homepageobject.featureSideNavList().get(0).isEnabled());
 	 * homepageobject.featureRecognitionList().get(0).isSelected();
-	 * System.out.println("Is Birthday & Anniversary link is active by default? "
-	 * +homepageobject.featureRecognitionList().get(0).isSelected());
+	 * System.out.println("Is Birthday & Anniversary link is active by default? " +
+	 * homepageobject.featureRecognitionList().get(0).isSelected());
 	 * homepageobject.birthdayAnniversary().click(); }
 	 * 
-	 * for(int j=0; j<featurelistsize; j++) { captureFeatureContent =
+	 * for (int j = 0; j < featurelistsize; j++) { captureFeatureContent =
 	 * homepageobject.featureSideNavList().get(j).getText();
-	 * System.out.println("The feature list content is :"+captureFeatureContent); }
-	 * System.out.println("The feature list content is :"+captureFeatureContent);
+	 * System.out.println("The feature list content is :" + captureFeatureContent);
+	 * } System.out.println("The feature list content is :" +
+	 * captureFeatureContent);
+	 * 
+	 * }
+	 * 
+	 * // Validate request a demo button functionality
+	 * 
+	 * @Test(priority = 6) public void requestDemoFunc() throws InterruptedException
+	 * { homepageobject.requestDemoButton().click(); String captureDemoBookHeader =
+	 * homepageobject.header().getText(); Assert.assertEquals(captureDemoBookHeader,
+	 * "Book a demo with Assembly");
+	 * driver.switchTo().frame(homepageobject.demoIframe()); Thread.sleep(1000L);
+	 * homepageobject.selectDemoTime().click();
+	 * System.out.println("Clicked on 8:30 button");
+	 * homepageobject.firstName().sendKeys("Jonathan");
+	 * homepageobject.lastName().sendKeys("fields");
+	 * homepageobject.demoEmail().sendKeys("jon@gmail.com");
+	 * homepageobject.messageTextarea().sendKeys("Slack");
+	 * homepageobject.confirmButton().click(); }
+	 * 
+	 * // Validate request a demo button functionality
+	 * 
+	 * @Test(priority = 7) public void requestDemoFuncCont() throws
+	 * InterruptedException { String captureDemoBookConfirmHeader =
+	 * homepageobject.bookingConfirmedMessage().getText();
+	 * Assert.assertEquals(captureDemoBookConfirmHeader, "Booking confirmed");
+	 * System.out.println("Booked demo timing is : " +
+	 * homepageobject.bookingTiming().getText());
+	 * driver.switchTo().defaultContent(); Thread.sleep(1000L);
+	 * homepageobject.closeModal().click(); Thread.sleep(1000L); // Validate booked
+	 * details homepageobject.requestDemoButton().click(); String
+	 * captureDemoBookHeader = homepageobject.header().getText();
+	 * Assert.assertEquals(captureDemoBookHeader, "Book a demo with Assembly");
+	 * homepageobject.closeModal().click();
 	 * 
 	 * }
 	 */
-
-	// Validate request a demo button functionality
-	@Test(priority = 6)
-	public void requestDemoFunc() throws InterruptedException {
-		homepageobject.requestDemoButton().click();
-		String captureDemoBookHeader = homepageobject.header().getText();
-		Assert.assertEquals(captureDemoBookHeader, "Book a demo with Assembly");
-		driver.switchTo().frame(homepageobject.demoIframe());
-		Thread.sleep(1000L);
-		homepageobject.selectDemoTime().click();
-		System.out.println("Clicked on 8:30 button");
-		homepageobject.firstName().sendKeys("Jonathan");
-		homepageobject.lastName().sendKeys("fields");
-		homepageobject.demoEmail().sendKeys("jon@gmail.com");
-		homepageobject.messageTextarea().sendKeys("Slack");
-		homepageobject.confirmButton().click();
-	}
-
-	// Validate request a demo button functionality
-	@Test(priority = 7)
-	public void requestDemoFuncCont() throws InterruptedException {
-		String captureDemoBookConfirmHeader = homepageobject.bookingConfirmedMessage().getText();
-		Assert.assertEquals(captureDemoBookConfirmHeader, "Booking confirmed");
-		System.out.println("Booked demo timing is : " + homepageobject.bookingTiming().getText());
-		driver.switchTo().defaultContent();
-		Thread.sleep(1000L);
-		homepageobject.closeModal().click();
-		Thread.sleep(1000L);
-		// Validate booked details
-		homepageobject.requestDemoButton().click();
-		String captureDemoBookHeader = homepageobject.header().getText();
-		Assert.assertEquals(captureDemoBookHeader, "Book a demo with Assembly");
-		homepageobject.closeModal().click();
-
-	}
 
 	public void enterEmailClickTryButton() {
 		int i;

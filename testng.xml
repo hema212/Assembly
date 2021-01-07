@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
-    <classes>
-     
-      <class name="slacktestcases.SlackIdentityUpgradeViewFlow"/>
-      
-    </classes>
-  </test> <!-- Test -->
+<listeners>
+<listener class-name="listener.TestngListeners" />
+</listeners>
+	<test name="downgrade to Free plan">
+		<classes>
+			<class name="billingFlow.FreePlanBillingFlow" />
+		</classes>
+	</test>
+
+	<test name="Activate plan">
+		<classes>
+			<class name="billingFlow.planActivateFlow" />
+		</classes>
+	</test>
+
+	<test name="change payment card details">
+		<classes>
+			<class name="billingFlow.changepaymentMethodFlow" />
+		</classes>
+	</test>
+	
 </suite> <!-- Suite -->
+
+
+
+
+  
+      
+   

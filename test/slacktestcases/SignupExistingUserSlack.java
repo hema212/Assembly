@@ -11,7 +11,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import PageObjects.loginPageObjects;
+import giveRecognitionPageObjects.loginPageObjects;
 import resources.InitiateDriver;
 
 
@@ -30,9 +30,10 @@ public class SignupExistingUserSlack extends InitiateDriver {
 
 	// Verify Existing user sign-up functionality
 	@Test(priority = 1)
-	public void ValidateExistingUserSignUp() {
+	public void ValidateExistingUserSignUp() throws InterruptedException {
 		driver.manage().window().maximize();
 		driver.get("https://dev.joinassembly.com");
+		Thread.sleep(1000L);
 		loginobject.getStarted().click();
 		loginobject.getUsernameObject().sendKeys("gaurav+paidtest@joinassembly.com");
 		loginobject.confirmButton().click();
@@ -46,8 +47,10 @@ public class SignupExistingUserSlack extends InitiateDriver {
 
 	// Verify Domain exists functionality
 	@Test(priority = 2)
-	public void ValidateSignUpDomainExistsFunc() {
+	public void ValidateSignUpDomainExistsFunc() throws InterruptedException {
 		loginobject.goBackToSignInButton().click();
+		Thread.sleep(1000L);
+		loginobject.getStarted().click();
 		loginobject.getUsernameObject().clear();
 		loginobject.getUsernameObject().sendKeys(Keys.chord(Keys.CONTROL, "a"), "pranesh+join21@joinassembly.com");
 		loginobject.confirmButton().click();

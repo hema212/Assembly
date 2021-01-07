@@ -13,9 +13,9 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import GsuitePageObject.GooglePageObjects;
-import PageObjects.RecognitionPageObject;
-import resources.GoogleSsoSignIn;
+import giveRecognitionPageObjects.RecognitionPageObject;
+import gsuitePageObjects.GooglePageObjects;
+import signInViaSSO.GoogleSsoSignIn;
 
 //Execute this First(1st) when GSuite is not connected and doesn't have GSuite users in it
 public class GsuiteQueuedInviteFlowValidation extends GoogleSsoSignIn {

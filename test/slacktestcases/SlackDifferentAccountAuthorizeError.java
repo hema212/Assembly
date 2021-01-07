@@ -10,11 +10,11 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import PageObjects.SlackIdentityObjects;
-import resources.BaseSlackAccountMismatch;
+import accountMismatchIM.SlackAccountMismatch;
+import slackPageObjects.SlackIdentityObjects;
 
 //Execute this Fifth (5th) when Account created is different from slack account
-public class SlackDifferentAccountAuthorizeError extends BaseSlackAccountMismatch {
+public class SlackDifferentAccountAuthorizeError extends SlackAccountMismatch {
 	public static Logger log = LogManager.getLogger(SlackDifferentAccountAuthorizeError.class.getName());
 	public SlackIdentityObjects slackobject;
 	public WebDriver driver;

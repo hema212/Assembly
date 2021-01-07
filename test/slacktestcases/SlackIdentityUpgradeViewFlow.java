@@ -13,12 +13,11 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import PageObjects.SlackIdentityObjects;
-import resources.Base;
-
+import accountSignInWhenIMConnected.SlackSignInWhenConnected;
+import slackPageObjects.SlackIdentityObjects;
 
 //Execute this Third(3rd) when Slack is not connected and account has free plan
-public class SlackIdentityUpgradeViewFlow extends Base {
+public class SlackIdentityUpgradeViewFlow extends SlackSignInWhenConnected {
 	public static Logger log = LogManager.getLogger(SlackIdentityUpgradeViewFlow.class.getName());
 	public SlackIdentityObjects slackobject;
 
@@ -32,7 +31,11 @@ public class SlackIdentityUpgradeViewFlow extends Base {
 	// Select Identity Management and Upgrade flow covered
 	@Test(priority = 1)
 	public void selectSlackIMProvider() throws InterruptedException {
+		Thread.sleep(2000L);
+		SignInWithSSOFunction();
+		Thread.sleep(1000L);
 		selectManagePage();
+		Thread.sleep(1000L);
 		slackobject.QuickSettingsText().click();
 		disconnectIdentityManagementOnYes();
 		System.out.println("Testcase-1 passed since application landed on Manage page and Assertion passed");
@@ -42,19 +45,24 @@ public class SlackIdentityUpgradeViewFlow extends Base {
 	// click on sure button
 	@Test(priority = 2)
 	public void connectSlackOnCancel() throws InterruptedException {
+		Thread.sleep(1000L);
 		slackIconSetUpPageValidate();
+
 		slackobject.ConnectSlackButton().click();
-		validateSignInSlackAppAssertion();
-		slackWorkspaceFlow();
+		Thread.sleep(1000L);
+		slackobject.AllowButton().click();
+		Thread.sleep(4000L);
 		nevermindButtonValidate();
 		System.out.println("User has clicked on Nevermind button");
 		Thread.sleep(1000L);
 		validateSelectPeopleAssertion();
 		System.out
 				.println("Testcase-2 Passes since application is connected to Slack and landed on select people page");
+
 	}
 
 	// Validate Upgrade now flow
+
 	@Test(priority = 3)
 	public void SlackFlowValidateUpgradeNowEmptyFields() throws InterruptedException {
 		Thread.sleep(2000L);
@@ -72,40 +80,39 @@ public class SlackIdentityUpgradeViewFlow extends Base {
 		if (slackobject.SetUpAlertMessage().getText() != null) {
 			System.out.println("entering into billing details");
 			validateCardValidDetails();
-			System.out
-			.println("Testcase-3 passed since billing details are provided and approved");
+			System.out.println("Testcase-3 passed since billing details are provided and approved");
 		}
 	}
-	
+
 	// View Invite Flow
-	@Test(priority=4)
+
+	@Test(priority = 4)
 	public void ViewInvitesFlow() throws InterruptedException {
 		validateSelectPeopleViewFlow();
 		System.out.println(
-				"Testcase-4 passed since channel is selected and page landed on Manage after view people button click" );
+				"Testcase-4 passed since channel is selected and page landed on Manage after view people button click");
 	}
-	
-	// Edit Connection flow 
-	// View people using Edit Connection Flow
-	@Test(priority=5)
+
+	// Edit Connection flow // View people using Edit Connection Flow
+
+	@Test(priority = 5)
 	public void editConnectionFlow() throws InterruptedException {
 		slackobject.EditConnectionButton().click();
 		createAssemblyAccountFlow();
-		System.out.println(
-				"Testcase-5 passed since Edit Connection flow is completed" );
-		validateQuickSettingsSlackFunction();
-		String activemembersCount = slackobject.ConnectIdentityText().getText();
-		String substring = activemembersCount.substring(10, 26);
-		System.out.println("The connected message is :" + substring);
-		Assert.assertEquals(substring, "1 member active");
-	}
+		System.out.println("Testcase-5 passed since Edit Connection flow is completed");
+		Thread.sleep(1000L);
+	//	validateQuickSettingsSlackFunction();
+		String errorMessageText = slackobject.SlackErrorMessage().getText();
+		System.out.println("Error message is " + errorMessageText);
+		driver.close();
 
-	
+	}
 
 	// Function to validate landing page of Manage
 	public void selectManagePage() throws InterruptedException {
 		slackobject.avatarIcon().click();
 		slackobject.AdminText().click();
+		Thread.sleep(1000L);
 		slackobject.UsersText().click();
 		slackobject.ManageText().click();
 		Thread.sleep(5000L);
@@ -186,7 +193,7 @@ public class SlackIdentityUpgradeViewFlow extends Base {
 		Thread.sleep(2000L);
 		String managePageLandingText = slackobject.ConnectIdentityText().getText();
 		System.out.println("the text is " + managePageLandingText);
-		//Assert.assertEquals(managePageLandingText, "Connect your identity provider");
+		// Assert.assertEquals(managePageLandingText, "Connect your identity provider");
 	}
 
 	// Validate Manage landing page when slack is connected
@@ -242,14 +249,14 @@ public class SlackIdentityUpgradeViewFlow extends Base {
 
 	// Validate Sign in with slack flow
 	public void SignInWithSSOFunction() throws InterruptedException {
-		slackobject.SignInWithSlackSSOClick().click();
+		// slackobject.SignInWithSlackSSOClick().click();
 		slackobject.SlackInputField().sendKeys("joinassembly21");
 		slackobject.SlackContinueSubmitButton().click();
 		slackobject.SlackEmailInputField().sendKeys("hema+21@joinassembly.com");
 		slackobject.slackPwdInputField().sendKeys("Assembly2020!");
 		slackobject.slackSignInButton().click();
 		validateSlackAppActualHeaderAssertion();
-		Thread.sleep(10000L);
+		Thread.sleep(7000L);
 		slackobject.AllowButton().click();
 	}
 
@@ -282,23 +289,22 @@ public class SlackIdentityUpgradeViewFlow extends Base {
 		}
 		slackobject.SetUpPaymentNextButton().click();
 		Thread.sleep(1000L);
-		String billingContent  = slackobject.ReviewBillingContent().getText();
-		System.out.println("The reviewed billing content is: " +billingContent);
+		String billingContent = slackobject.ReviewBillingContent().getText();
+		System.out.println("The reviewed billing content is: " + billingContent);
 		slackobject.ReviewBillConfirm().click();
 		Thread.sleep(3000L);
-		
+
 	}
 
-	
-	//change the logic here
+	// change the logic here
 	public void validateQuickSettingsSlackFunction() {
 		slackobject.QuickSettingsText().click();
 		Boolean saveSettingsActive = slackobject.SaveSettingsButton().isEnabled();
 		System.out.println(saveSettingsActive);
 		if (saveSettingsActive == true) {
-			//slackobject.AutoApproveRadio().click();
+			// slackobject.AutoApproveRadio().click();
 			Boolean isAutoapprovalSelected = slackobject.AutoApproveRadio().isSelected();
-			if(isAutoapprovalSelected == true) {
+			if (isAutoapprovalSelected == true) {
 				System.out.println("Auto approve is selected by default");
 			}
 			slackobject.SaveSettingsButton().click();
@@ -317,31 +323,31 @@ public class SlackIdentityUpgradeViewFlow extends Base {
 		slackobject.slackPwdInputField().sendKeys("Assembly2020!");
 		slackobject.slackSignInButton().click();
 		validateSlackAppActualHeaderAssertion();
-		Thread.sleep(3000L);
+		Thread.sleep(10000L);
 		slackobject.AllowButton().click();
 	}
-	
+
 	public void validateSelectPeopleViewFlow() throws InterruptedException {
 		createAssemblyAccountFlow();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView(true);",slackobject.DisconnectSlackButton());
+		js.executeScript("arguments[0].scrollIntoView(true);", slackobject.DisconnectSlackButton());
 		Thread.sleep(10000L);
 		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(driver, 20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(), 'Disconnect Slack')]")));
+		wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(), 'Disconnect Slack')]")));
 		Thread.sleep(4000L);
 		disconnectIdentityManagementOnKeepIt();
 		validateCreateAccountAssertion();
 		System.out.println("User has click on 'No, Keep it button in Create Accounts page");
 		validateCreateAccountAssertion();
-		System.out.println(
-				"View people button is displayed? " + slackobject.viewPeopleInviteButton().isEnabled());
+		System.out.println("View people button is displayed? " + slackobject.viewPeopleInviteButton().isEnabled());
 		Thread.sleep(2000);
 		slackobject.viewPeopleInviteButton().click();
 		validateManageSlackConnectedAssertion();
-		
+
 	}
-	
+
 	public void createAssemblyAccountFlow() throws InterruptedException {
 		Thread.sleep(1000L);
 		validateSelectPeopleAssertion();
@@ -350,7 +356,7 @@ public class SlackIdentityUpgradeViewFlow extends Base {
 		slackobject.SelectChannels().click();
 		Thread.sleep(2000L);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView(true);",slackobject.SelectAllCheckBox());
+		js.executeScript("arguments[0].scrollIntoView(true);", slackobject.SelectAllCheckBox());
 		Thread.sleep(1000L);
 		slackobject.SelectAllCheckBox().click();
 		Thread.sleep(1000L);

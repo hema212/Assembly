@@ -10,7 +10,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import PageObjects.RecognitionPageObject;
+import giveRecognitionPageObjects.RecognitionPageObject;
 import resources.Base;
 
 public class TrophyCountDisplayValidation extends Base {

@@ -13,9 +13,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import GsuitePageObject.GooglePageObjects;
-import resources.GoogleSsoSignIn;
-import resources.GsuiteBase;
+import gsuitePageObjects.GooglePageObjects;
+import signInViaSSO.GoogleSsoSignIn;
 
 public class GsuiteUpgradeViewFlow extends GoogleSsoSignIn {
 	public static Logger log = LogManager.getLogger(GsuiteUpgradeViewFlow.class.getName());
@@ -334,6 +333,7 @@ public class GsuiteUpgradeViewFlow extends GoogleSsoSignIn {
 		googleobject.ContinueNext().click();
 		Thread.sleep(1000L);
 		Boolean sendNowRadioActive = googleobject.SendInvitationsNowRadio().isSelected();
+		System.out.println("Is send now radio button option is selected?"+ sendNowRadioActive);
 		System.out.println(
 				"Is send invitations now radio selected? " + googleobject.SendInvitationsNowRadio().isSelected());
 		System.out.println(

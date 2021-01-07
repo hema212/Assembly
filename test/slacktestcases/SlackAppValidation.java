@@ -10,9 +10,9 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import PageObjects.SlackAppPageObjects;
-import PageObjects.SlackIdentityObjects;
 import resources.InitiateDriver;
+import slackPageObjects.SlackAppPageObjects;
+import slackPageObjects.SlackIdentityObjects;
 
 //Execute this 7th once SlackIntegrationFlowValidation is done
 public class SlackAppValidation extends InitiateDriver {

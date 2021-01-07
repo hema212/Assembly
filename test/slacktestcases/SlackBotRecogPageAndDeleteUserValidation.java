@@ -13,18 +13,18 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import PageObjects.RecognitionPageObject;
-import PageObjects.SlackIdentityObjects;
-import PageObjects.SlackIntegrationPageObjects;
-import PageObjects.loginPageObjects;
-import resources.BaseSignInViaSlack;
+import accountSignInWhenIMConnected.SlackSignInWhenConnected;
+import giveRecognitionPageObjects.RecognitionPageObject;
+import giveRecognitionPageObjects.loginPageObjects;
+import slackPageObjects.SlackIdentityObjects;
+import slackPageObjects.SlackIntegrationPageObjects;
 
 
 /* Execute this after SlackAppValidation has run / Execute 8th.
  Execute when slack bot is connected and edit connection button is visible + Delete user and add them 
  back + validate previous data reflected */
 
-public class SlackBotRecogPageAndDeleteUserValidation extends BaseSignInViaSlack {
+public class SlackBotRecogPageAndDeleteUserValidation extends SlackSignInWhenConnected {
 	
 	public static Logger log = LogManager.getLogger(SlackBotRecogPageAndDeleteUserValidation.class.getName());
 	public SlackIntegrationPageObjects slackintegrationobject;
